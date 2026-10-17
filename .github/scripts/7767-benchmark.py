@@ -177,7 +177,6 @@ def main():
             cpu_count=os.cpu_count(), clock_ticks=os.sysconf("SC_CLK_TCK"),
             mode=os.environ["MODE"], sample=os.environ["SAMPLE"],
             batch=os.environ["BATCH"], worker=os.environ["WORKER"]), indent=2))
-        subprocess.run(["git", "merge-base", "--is-ancestor", BASELINE, "HEAD"], check=True)
         with (OUT / "disk-samples.log").open("w") as log:
             process = subprocess.Popen([sys.executable, __file__, "sample"], stdout=log,
                                        stderr=subprocess.STDOUT, start_new_session=True)
@@ -217,7 +216,8 @@ def main():
     elif action == "finalize":
         (OUT / "stop-sampling").touch()
         snapshot("final")
-        records = [json.loads(line) for line in (OUT / "disk-samples.jsonl").read_text().splitlines()]
+        samples = OUT / "disk-samples.jsonl"
+        records = [json.loads(line) for line in samples.read_text().splitlines()] if samples.exists() else []
         stages = [json.loads(path.read_text()) for path in OUT.glob("*.json")
                   if path.name in {name + ".json" for name in ["checkout", "after_cleanup", "before_restore", "after_restore", "before_build", "after_build", "before_save", "after_save", "after_docker_save", "final"]}]
         metric(stage="overall", min_free_disk_bytes=min(record["free_disk_bytes"] for record in records + stages),
@@ -229,7 +229,8 @@ def main():
             metric(stage="save_host_counters", **{key + "_delta": after[key] - before[key]
                    for key in ["cpu_busy_ticks", "io_read_bytes", "io_write_bytes", "net_received_bytes", "net_sent_bytes"]})
         inventory("after")
-        print((OUT / "disk-samples.log").read_text(), flush=True)
+        if (OUT / "disk-samples.log").exists():
+            print((OUT / "disk-samples.log").read_text(), flush=True)
 
 
 if __name__ == "__main__":
