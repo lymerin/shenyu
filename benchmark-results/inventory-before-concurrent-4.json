@@ -1,0 +1,14 @@
+{
+  "total_count": 1,
+  "actions_caches": [
+    {
+      "id": 9098703027,
+      "ref": "refs/heads/bench-7767",
+      "key": "Linux-maven-8a2c41e76411b4f1bee48bb1e3f397f58722a77069a5329af28a1de9a3b8710a",
+      "version": "41d1ec4cf4a0f14e35637462cb542fdb4ca2f7d94ec87d84b439a859c4ebe98f",
+      "last_accessed_at": "2026-10-17T19:52:35.000275Z",
+      "created_at": "2026-10-17T19:10:01.849618Z",
+      "size_in_bytes": 776772608
+    }
+  ]
+}

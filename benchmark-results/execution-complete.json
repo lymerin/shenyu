@@ -1,0 +1,8 @@
+{
+  "completed_at_utc": "2026-10-17T20:02:27.970136+00:00",
+  "workload_finished_at_utc": "2026-10-17T19:59:27Z",
+  "valid_runs": 19,
+  "repeat_later": false,
+  "benchmark_branch_retained": "bench-7767",
+  "source_commit": "2cc3b3c8c48d47a880fae7a297f9170ab3134130"
+}

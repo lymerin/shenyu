@@ -1,0 +1,13 @@
+{
+  "root_total_bytes": 154894188544,
+  "root_used_bytes": 62849671168,
+  "free_disk_bytes": 92027740160,
+  "cpu_total_ticks": 12722,
+  "cpu_busy_ticks": 3210,
+  "io_read_bytes": 1005624320,
+  "io_write_bytes": 3208615424,
+  "net_received_bytes": 8151961,
+  "net_sent_bytes": 333458,
+  "m2_raw_bytes": 0,
+  "workspace_bytes": 39958575
+}

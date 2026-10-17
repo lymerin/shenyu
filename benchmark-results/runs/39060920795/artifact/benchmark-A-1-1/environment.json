@@ -1,0 +1,14 @@
+{
+  "source_commit": "01e3e8bef42ace79859ab5ebfe6c413fb3bb4d23",
+  "baseline_commit": "34781a0aea0df7ddd4df10962f814157bb33b304",
+  "runner": "GitHub Actions 1000000441",
+  "runner_os": "Linux",
+  "image_os": "ubuntu24",
+  "image_version": "20261012.334.1",
+  "cpu_count": 4,
+  "clock_ticks": 100,
+  "mode": "A",
+  "sample": "1",
+  "batch": "serial",
+  "worker": "1"
+}

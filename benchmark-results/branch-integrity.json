@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-17T19:59:48.191303+00:00",
+  "original_workspace": "D:/Projects/shenyu",
+  "original_branch": "7713",
+  "original_head": "ba75dfe377f8fa73b78961cdd4d0cf815a8f868a",
+  "original_working_tree_clean": true,
+  "fork_repair_branch": "7767",
+  "fork_repair_sha": "34781a0aea0df7ddd4df10962f814157bb33b304",
+  "official_pr": 7781,
+  "official_pr_state": "open",
+  "official_pr_draft": true,
+  "official_pr_head_sha": "34781a0aea0df7ddd4df10962f814157bb33b304",
+  "official_check_method": "read-only GET"
+}

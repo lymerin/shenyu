@@ -1,0 +1,31 @@
+{
+  "source_commit": "2cc3b3c8c48d47a880fae7a297f9170ab3134130",
+  "baseline_commit": "34781a0aea0df7ddd4df10962f814157bb33b304",
+  "runner": "GitHub Actions 1000000459",
+  "runner_os": "Linux",
+  "image_os": "ubuntu24",
+  "image_version": "20261012.334.1",
+  "cpu_count": 4,
+  "clock_ticks": 100,
+  "mode": "C",
+  "sample": "1",
+  "batch": "concurrent-4",
+  "worker": "2",
+  "java": "openjdk version \"17.0.20.1\" 2026-08-18\nOpenJDK Runtime Environment Temurin-17.0.20.1+1 (build 17.0.20.1+1)\nOpenJDK 64-Bit Server VM Temurin-17.0.20.1+1 (build 17.0.20.1+1, mixed mode, sharing)",
+  "mvnd": "Apache Maven Daemon (mvnd) 1.0.6 linux-amd64 native client (e0df65807439de579e16632881cf4be14b5a3cca)\nTerminal: org.jline.terminal.impl.DumbTerminal\nApache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)\nMaven home: /home/runner/.local/mvnd/mvn\nJava version: 17.0.20.1, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-17-jdk-amd64\nDefault locale: en, platform encoding: UTF-8\nOS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\"",
+  "docker": "Client: Docker Engine - Community\n Version:           28.0.4\n API version:       1.48\n Go version:        go1.23.7\n Git commit:        b8034c0\n Built:             Tue Mar 25 15:07:16 2025\n OS/Arch:           linux/amd64\n Context:           default\n\nServer: Docker Engine - Community\n Engine:\n  Version:          28.0.4\n  API version:      1.48 (minimum version 1.24)\n  Go version:       go1.23.7\n  Git commit:       6430e49\n  Built:            Tue Mar 25 15:07:16 2025\n  OS/Arch:          linux/amd64\n  Experimental:     false\n containerd:\n  Version:          v2.4.1\n  GitCommit:        f2551031d7276a770f65f98c9b52e57e7dad07e8\n runc:\n  Version:          1.5.2\n  GitCommit:        v1.5.2-0-g29dd3dc2\n docker-init:\n  Version:          0.19.0\n  GitCommit:        de40ad0",
+  "workload": [
+    "mvnd",
+    "-B",
+    "clean",
+    "install",
+    "-Prelease,docker",
+    "-Dmaven.javadoc.skip=true",
+    "-Drat.skip=true",
+    "-Dmaven.test.skip=true",
+    "-Djacoco.skip=true",
+    "-DskipITs",
+    "-DskipTests",
+    "-T1C"
+  ]
+}

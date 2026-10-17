@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-10-17T19:00:17.511Z",
+  "started_beijing": "2026-10-18 03:00:17.511 +08:00",
+  "allowed_write_repository": "lymerin/shenyu",
+  "read_only_upstream": "apache/shenyu",
+  "unchanged_repair_branch": "7767",
+  "unchanged_pr": "https://github.com/apache/shenyu/pull/7781",
+  "baseline_commit": "34781a0aea0df7ddd4df10962f814157bb33b304",
+  "benchmark_source_commit": "2cc3b3c8c48d47a880fae7a297f9170ab3134130",
+  "preflight_excluded_run": 39060920795,
+  "preflight_reason": "Default actions/checkout depth=1 cannot establish baseline ancestry in the runner. Failed before Maven/cache. Ancestry verified locally; runtime shallow-history check removed before valid measurements.",
+  "preflight_old_source": "01e3e8bef42ace79859ab5ebfe6c413fb3bb4d23",
+  "concurrency_scope": "Independent dispatch runs on one benchmark ref, warm same-key cache, max4. Does not measure distinct PR merge refs, cold first-writer races, POM churn or eviction.",
+  "sampling_interval_seconds": 5,
+  "stop_limits": {
+    "free_disk_gib_min": 15,
+    "cache_total_gib_max": 4,
+    "cache_entries_on_benchmark_ref_max": 1,
+    "queue_seconds_max": 180,
+    "retries_in_one_run_stop": 2,
+    "http429_mentions_in_one_run_stop": 3
+  },
+  "references": {
+    "scope_and_limits": "https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching",
+    "cache_scope_management": "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manage-caches",
+    "cache_action": "https://github.com/actions/cache"
+  },
+  "docs_checked_date": "2026-10-18"
+}

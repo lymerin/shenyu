@@ -1,0 +1,260 @@
+{
+  "status": "passed",
+  "valid_runs": 19,
+  "excluded_preflight_runs": 1,
+  "serial_samples_per_mode": 3,
+  "concurrent_peak_builds": [
+    1,
+    2,
+    4
+  ],
+  "concurrent_peak_restore_steps": [
+    1,
+    2,
+    1
+  ],
+  "concurrent_peak_save_steps": [
+    1,
+    1,
+    1
+  ],
+  "unmeasured": [
+    "simultaneous same-key save",
+    "cold first-writer race",
+    "different PR merge refs",
+    "POM churn/eviction",
+    "natural transient recovery",
+    "wrapper-isolated overhead",
+    "downstream E2E/pull_request permissions"
+  ],
+  "checks": [
+    {
+      "run_id": 39061018046,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39061334821,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39061620432,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39061832433,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39062082358,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39062365270,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39062606495,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39062894672,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39063137277,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39063373638,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39063576920,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39063814084,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064094335,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064308663,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064314593,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064565425,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064574790,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064584890,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    },
+    {
+      "run_id": 39064594884,
+      "resolved_actions": {
+        "actions/checkout@v3": "a37ce9120846195fa4ece8f58b268e6043cb2f26",
+        "actions/cache@v3": "6f8efc29b200d32929f49075959781ed54ec270c",
+        "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "actions/setup-java@v4": "cf277c60eb25467037889841efdb72551f06f6c3"
+      },
+      "initial_docker_system_df": "Images 6 0 1.869GB",
+      "synthetic_cases_passed": 20,
+      "actual_workload_arguments_match": true
+    }
+  ]
+}

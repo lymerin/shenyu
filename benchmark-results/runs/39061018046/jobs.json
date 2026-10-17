@@ -1,0 +1,228 @@
+{
+  "total_count": 2,
+  "jobs": [
+    {
+      "id": 117478815859,
+      "run_id": 39061018046,
+      "workflow_name": "7767 A sample=1 batch=serial worker=1",
+      "head_branch": "bench-7767",
+      "run_url": "https://api.github.com/repos/lymerin/shenyu/actions/runs/39061018046",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOT2msds8AAAAbWkh4cw",
+      "head_sha": "2cc3b3c8c48d47a880fae7a297f9170ab3134130",
+      "url": "https://api.github.com/repos/lymerin/shenyu/actions/jobs/117478815859",
+      "html_url": "https://github.com/lymerin/shenyu/actions/runs/39061018046/job/117478815859",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-17T19:06:35Z",
+      "started_at": "2026-10-17T19:06:37Z",
+      "completed_at": "2026-10-17T19:10:12Z",
+      "name": "benchmark",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T19:06:37Z",
+          "completed_at": "2026-10-17T19:06:38Z"
+        },
+        {
+          "name": "Run actions/checkout@v3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T19:06:38Z",
+          "completed_at": "2026-10-17T19:06:41Z"
+        },
+        {
+          "name": "Record checkout and start disk sampler",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T19:06:41Z",
+          "completed_at": "2026-10-17T19:06:42Z"
+        },
+        {
+          "name": "Check retry classifier",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T19:06:42Z",
+          "completed_at": "2026-10-17T19:06:42Z"
+        },
+        {
+          "name": "Free disk space when needed",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-17T19:06:42Z",
+          "completed_at": "2026-10-17T19:06:42Z"
+        },
+        {
+          "name": "Run ./actions/setup-java-with-retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-17T19:06:42Z",
+          "completed_at": "2026-10-17T19:06:43Z"
+        },
+        {
+          "name": "Install mvnd",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T19:06:43Z",
+          "completed_at": "2026-10-17T19:06:47Z"
+        },
+        {
+          "name": "Record environment and before-restore disk",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-17T19:06:47Z",
+          "completed_at": "2026-10-17T19:06:51Z"
+        },
+        {
+          "name": "Restore ShenYu Maven Repos",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-10-17T19:06:51Z",
+          "completed_at": "2026-10-17T19:06:51Z"
+        },
+        {
+          "name": "Record restored cache",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-17T19:06:51Z",
+          "completed_at": "2026-10-17T19:06:52Z"
+        },
+        {
+          "name": "Build with Maven",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-17T19:06:52Z",
+          "completed_at": "2026-10-17T19:09:55Z"
+        },
+        {
+          "name": "Record Maven repository and Docker images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-17T19:09:55Z",
+          "completed_at": "2026-10-17T19:09:56Z"
+        },
+        {
+          "name": "Record before-save counters",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-17T19:09:56Z",
+          "completed_at": "2026-10-17T19:09:56Z"
+        },
+        {
+          "name": "Save ShenYu Maven Repos",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-17T19:09:56Z",
+          "completed_at": "2026-10-17T19:10:01Z"
+        },
+        {
+          "name": "Record after-save counters",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-17T19:10:01Z",
+          "completed_at": "2026-10-17T19:10:02Z"
+        },
+        {
+          "name": "Build Docker Image",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-17T19:10:02Z",
+          "completed_at": "2026-10-17T19:10:07Z"
+        },
+        {
+          "name": "Finalize measurements",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-17T19:10:07Z",
+          "completed_at": "2026-10-17T19:10:09Z"
+        },
+        {
+          "name": "Upload benchmark measurements only",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-17T19:10:09Z",
+          "completed_at": "2026-10-17T19:10:10Z"
+        },
+        {
+          "name": "Post Run ./actions/setup-java-with-retry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-10-17T19:10:10Z",
+          "completed_at": "2026-10-17T19:10:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v3",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36,
+          "started_at": "2026-10-17T19:10:10Z",
+          "completed_at": "2026-10-17T19:10:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37,
+          "started_at": "2026-10-17T19:10:10Z",
+          "completed_at": "2026-10-17T19:10:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/lymerin/shenyu/check-runs/117478815859",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000443,
+      "runner_name": "GitHub Actions 1000000443",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 117478816995,
+      "run_id": 39061018046,
+      "workflow_name": "7767 A sample=1 batch=serial worker=1",
+      "head_branch": "bench-7767",
+      "run_url": "https://api.github.com/repos/lymerin/shenyu/actions/runs/39061018046",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOT2msds8AAAAbWkh84w",
+      "head_sha": "2cc3b3c8c48d47a880fae7a297f9170ab3134130",
+      "url": "https://api.github.com/repos/lymerin/shenyu/actions/jobs/117478816995",
+      "html_url": "https://github.com/lymerin/shenyu/actions/runs/39061018046/job/117478816995",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-10-17T19:06:35Z",
+      "started_at": "2026-10-17T19:06:35Z",
+      "completed_at": "2026-10-17T19:06:34Z",
+      "name": "register",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/lymerin/shenyu/check-runs/117478816995",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}
