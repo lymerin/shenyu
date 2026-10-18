@@ -1,0 +1,5 @@
+{
+  "expected_benchmark_key_hash": "8a2c41e76411b4f1bee48bb1e3f397f58722a77069a5329af28a1de9a3b8710a",
+  "algorithm": "SHA256(concatenation of per-pom binary SHA256 in sorted component DFS order)",
+  "toolkit_source": "https://github.com/actions/toolkit/blob/main/packages/glob/src/internal-hash-files.ts"
+}

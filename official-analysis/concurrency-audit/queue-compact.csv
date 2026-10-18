@@ -1,0 +1,12 @@
+﻿workflow,basis,n,mean_s,median_s,min_s,max_s,p95_s
+ci,job_created_to_started,2226,1341.3126684636118,13.0,1.0,20519.0,5601.0
+ci,pr_job_created_to_started,1642,1725.9177831912302,97.5,1.0,20519.0,6245.0
+ci,push_job_created_to_started,584,259.9400684931507,2.0,1.0,6779.0,1700.0
+e2e,job_created_to_started,2840,1181.2492957746479,3.0,1.0,20519.0,5483.0
+e2e,pr_job_created_to_started,2409,1343.0813615608135,17.0,1.0,20519.0,5767.0
+e2e,push_job_created_to_started,431,276.7169373549884,2.0,1.0,6772.0,1617.0
+it,job_created_to_started,2139,1481.561009817672,20.0,1.0,20655.0,5789.0
+it,pr_job_created_to_started,1778,1707.4190101237346,69.5,1.0,20655.0,6232.0
+it,push_job_created_to_started,361,369.1634349030471,2.0,1.0,6546.0,3335.0
+all_three,latest_actual_pr_job_queue,5829,1562.0571281523416,55.0,1.0,20655.0,6129.0
+all_three,latest_actual_all_job_queue,7205,1319.8569049271339,7.0,1.0,20655.0,5617.0

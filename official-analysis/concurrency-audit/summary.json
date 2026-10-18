@@ -1,0 +1,455 @@
+{
+  "window_start": "2026-10-11T02:45:44+00:00",
+  "window_end": "2026-10-18T02:45:44+00:00",
+  "run_cohort_size": 1119,
+  "events": {
+    "pull_request": 822,
+    "push": 297
+  },
+  "conclusions": {
+    "action_required": 57,
+    "success": 700,
+    "failure": 134,
+    "cancelled": 228
+  },
+  "identity_sources": {
+    "source_repository_branch_and_pr_open_at_run_creation": 482,
+    "not_pull_request": 297,
+    "run_metadata": 5,
+    "commit_pull_association_and_source_ref": 335
+  },
+  "missing_jobs_files": [],
+  "actual_latest_jobs": 7205,
+  "inherited_jobs_excluded": 184,
+  "latest_rerun_count": 56,
+  "workflow_envelope": {
+    "peak_distinct_prs": 18,
+    "peak_intervals": 39,
+    "exactly_2": {
+      "seconds": 38923.0,
+      "episodes": 75,
+      "longest_episode_s": 6330.0
+    },
+    "exactly_3": {
+      "seconds": 27024.0,
+      "episodes": 44,
+      "longest_episode_s": 4482.0
+    },
+    "at_least_2": {
+      "seconds": 235829.0,
+      "episodes": 50,
+      "longest_episode_s": 77768.0
+    },
+    "at_least_3": {
+      "seconds": 196906.0,
+      "episodes": 25,
+      "longest_episode_s": 76606.0
+    },
+    "at_least_4": {
+      "seconds": 169882.0,
+      "episodes": 19,
+      "longest_episode_s": 71655.0
+    },
+    "time_weighted_distinct_prs_when_active": 5.371197100802269,
+    "active_seconds": 304636.0,
+    "seconds_by_distinct_pr_count": {
+      "0": 300164.0,
+      "1": 68807.0,
+      "2": 38923.0,
+      "3": 27024.0,
+      "4": 26248.0,
+      "5": 16076.0,
+      "6": 26748.0,
+      "7": 9720.0,
+      "8": 21386.0,
+      "9": 8044.0,
+      "10": 6509.0,
+      "11": 18332.0,
+      "12": 19936.0,
+      "13": 4904.0,
+      "14": 4551.0,
+      "15": 3739.0,
+      "16": 1155.0,
+      "17": 2466.0,
+      "18": 68.0
+    },
+    "zero_observed_pr_seconds_full_window": 300164.0,
+    "full_window_buckets": {
+      "0": 300164.0,
+      "1": 68807.0,
+      "2": 38923.0,
+      "3": 27024.0,
+      "4+": 169882.0
+    },
+    "full_window_bucket_percent": {
+      "0": 49.63029100529101,
+      "1": 11.376818783068783,
+      "2": 6.435681216931217,
+      "3": 4.468253968253968,
+      "4+": 28.088955026455025
+    },
+    "time_weighted_median_distinct_prs_when_active": 4,
+    "time_weighted_p95_distinct_prs_when_active": 13,
+    "peak_examples": [
+      {
+        "kind": "workflow_envelope",
+        "start_utc": "2026-10-14T15:42:35+00:00",
+        "end_utc": "2026-10-14T15:42:36+00:00",
+        "seconds": 1.0,
+        "distinct_prs": 18,
+        "active_intervals": 33,
+        "prs": "7387;7404;7484;7517;7544;7582;7598;7604;7605;7625;7626;7627;7628;7629;7630;7631;7632;7633",
+        "run_ids": "38502201812;38546704701;38553241158;38553508914;38554879617;38560713747;38561105272;38561105454;38561815813;38561815865;38566546559;38566546938;38567813985;38581618588;38581619968;38581620071;38581620083;38582956158;38582956222;38583428118;38584449453;38584449598;38584449953;38585443524;38586083374;38586099251;38586099267;38586099293;38586114586;38586114604;38586114639;38591695735;38591695758"
+      },
+      {
+        "kind": "workflow_envelope",
+        "start_utc": "2026-10-14T15:42:36+00:00",
+        "end_utc": "2026-10-14T15:43:26+00:00",
+        "seconds": 50.0,
+        "distinct_prs": 18,
+        "active_intervals": 36,
+        "prs": "7387;7404;7484;7517;7544;7582;7598;7604;7605;7625;7626;7627;7628;7629;7630;7631;7632;7633",
+        "run_ids": "38502201812;38546704701;38553241158;38553508914;38554879617;38560713747;38561105272;38561105454;38561815813;38561815865;38566546559;38566546938;38567813985;38581618588;38581619968;38581620071;38581620083;38582956158;38582956222;38583428118;38584449453;38584449598;38584449953;38585443524;38586083374;38586099251;38586099267;38586099293;38586114586;38586114604;38586114639;38591695735;38591695758;38591697007;38591697125;38591697150"
+      },
+      {
+        "kind": "workflow_envelope",
+        "start_utc": "2026-10-14T15:43:26+00:00",
+        "end_utc": "2026-10-14T15:43:27+00:00",
+        "seconds": 1.0,
+        "distinct_prs": 18,
+        "active_intervals": 38,
+        "prs": "7387;7404;7484;7517;7544;7582;7598;7604;7605;7625;7626;7627;7628;7629;7630;7631;7632;7633",
+        "run_ids": "38502201812;38546704701;38553241158;38553508914;38554879617;38560713747;38561105272;38561105454;38561815813;38561815865;38566546559;38566546938;38567813985;38581618588;38581619968;38581620071;38581620083;38582956158;38582956222;38583428118;38584449453;38584449598;38584449953;38585443524;38586083374;38586099251;38586099267;38586099293;38586114586;38586114604;38586114639;38591695735;38591695758;38591697007;38591697125;38591697150;38591820739;38591820957"
+      },
+      {
+        "kind": "workflow_envelope",
+        "start_utc": "2026-10-14T15:43:27+00:00",
+        "end_utc": "2026-10-14T15:43:43+00:00",
+        "seconds": 16.0,
+        "distinct_prs": 18,
+        "active_intervals": 39,
+        "prs": "7387;7404;7484;7517;7544;7582;7598;7604;7605;7625;7626;7627;7628;7629;7630;7631;7632;7633",
+        "run_ids": "38502201812;38546704701;38553241158;38553508914;38554879617;38560713747;38561105272;38561105454;38561815813;38561815865;38566546559;38566546938;38567813985;38581618588;38581619968;38581620071;38581620083;38582956158;38582956222;38583428118;38584449453;38584449598;38584449953;38585443524;38586083374;38586099251;38586099267;38586099293;38586114586;38586114604;38586114639;38591695735;38591695758;38591697007;38591697125;38591697150;38591820739;38591820957;38591821134"
+      }
+    ]
+  },
+  "actual_runner_jobs": {
+    "peak_distinct_prs": 9,
+    "peak_intervals": 122,
+    "exactly_2": {
+      "seconds": 32666.0,
+      "episodes": 366,
+      "longest_episode_s": 846.0
+    },
+    "exactly_3": {
+      "seconds": 8118.0,
+      "episodes": 179,
+      "longest_episode_s": 919.0
+    },
+    "at_least_2": {
+      "seconds": 50901.0,
+      "episodes": 244,
+      "longest_episode_s": 3246.0
+    },
+    "at_least_3": {
+      "seconds": 18235.0,
+      "episodes": 124,
+      "longest_episode_s": 1820.0
+    },
+    "at_least_4": {
+      "seconds": 10117.0,
+      "episodes": 57,
+      "longest_episode_s": 1531.0
+    },
+    "time_weighted_distinct_prs_when_active": 1.647048035646362,
+    "active_seconds": 147224.0,
+    "seconds_by_distinct_pr_count": {
+      "0": 457576.0,
+      "1": 96323.0,
+      "2": 32666.0,
+      "3": 8118.0,
+      "4": 3160.0,
+      "5": 1438.0,
+      "6": 2301.0,
+      "7": 2910.0,
+      "8": 302.0,
+      "9": 6.0
+    },
+    "zero_observed_pr_seconds_full_window": 457576.0,
+    "full_window_buckets": {
+      "0": 457576.0,
+      "1": 96323.0,
+      "2": 32666.0,
+      "3": 8118.0,
+      "4+": 10117.0
+    },
+    "full_window_bucket_percent": {
+      "0": 75.6574074074074,
+      "1": 15.926421957671957,
+      "2": 5.401124338624339,
+      "3": 1.3422619047619047,
+      "4+": 1.6727843915343916
+    },
+    "time_weighted_median_distinct_prs_when_active": 1,
+    "time_weighted_p95_distinct_prs_when_active": 4,
+    "peak_examples": [
+      {
+        "kind": "actual_runner_jobs",
+        "start_utc": "2026-10-17T14:23:56+00:00",
+        "end_utc": "2026-10-17T14:24:00+00:00",
+        "seconds": 4.0,
+        "distinct_prs": 9,
+        "active_intervals": 49,
+        "prs": "6457;7088;7387;7661;7666;7668;7691;7699;7776",
+        "run_ids": "38210036830;38752107044;38758225737;38765300281;38859329393;38891986408;38998043669;39005108874;39040522524;39040522579;39040522590"
+      },
+      {
+        "kind": "actual_runner_jobs",
+        "start_utc": "2026-10-17T14:24:15+00:00",
+        "end_utc": "2026-10-17T14:24:17+00:00",
+        "seconds": 2.0,
+        "distinct_prs": 9,
+        "active_intervals": 41,
+        "prs": "6457;7088;7387;7618;7639;7661;7691;7699;7776",
+        "run_ids": "38210036830;38430032924;38694499916;38752107044;38859329393;38891986408;38998043669;39005108874;39040522524;39040522579;39040522590"
+      }
+    ]
+  },
+  "per_workflow": {
+    "ci": {
+      "runs": 376,
+      "conclusions": {
+        "action_required": 19,
+        "success": 238,
+        "cancelled": 80,
+        "failure": 39
+      },
+      "pr_runs": 277,
+      "cancelled_pr_runs": 14,
+      "pr_cancelled_fraction": 0.05054151624548736,
+      "attempt_start_to_first_job_start": {
+        "n": 319,
+        "mean_s": 1662.0470219435736,
+        "median_s": 42.0,
+        "min_s": 2.0,
+        "max_s": 20508.0,
+        "p95_s": 6926.0
+      },
+      "job_created_to_started": {
+        "n": 2226,
+        "mean_s": 1341.3126684636118,
+        "median_s": 13.0,
+        "min_s": 1.0,
+        "max_s": 20519.0,
+        "p95_s": 5601.0
+      },
+      "pr_job_created_to_started": {
+        "n": 1642,
+        "mean_s": 1725.9177831912302,
+        "median_s": 97.5,
+        "min_s": 1.0,
+        "max_s": 20519.0,
+        "p95_s": 6245.0
+      },
+      "push_job_created_to_started": {
+        "n": 584,
+        "mean_s": 259.9400684931507,
+        "median_s": 2.0,
+        "min_s": 1.0,
+        "max_s": 6779.0,
+        "p95_s": 1700.0
+      }
+    },
+    "e2e": {
+      "runs": 376,
+      "conclusions": {
+        "action_required": 20,
+        "success": 212,
+        "cancelled": 78,
+        "failure": 66
+      },
+      "pr_runs": 277,
+      "cancelled_pr_runs": 19,
+      "pr_cancelled_fraction": 0.06859205776173286,
+      "attempt_start_to_first_job_start": {
+        "n": 327,
+        "mean_s": 1512.755351681957,
+        "median_s": 20.0,
+        "min_s": 2.0,
+        "max_s": 20520.0,
+        "p95_s": 6812.0
+      },
+      "job_created_to_started": {
+        "n": 2840,
+        "mean_s": 1181.2492957746479,
+        "median_s": 3.0,
+        "min_s": 1.0,
+        "max_s": 20519.0,
+        "p95_s": 5483.0
+      },
+      "pr_job_created_to_started": {
+        "n": 2409,
+        "mean_s": 1343.0813615608135,
+        "median_s": 17.0,
+        "min_s": 1.0,
+        "max_s": 20519.0,
+        "p95_s": 5767.0
+      },
+      "push_job_created_to_started": {
+        "n": 431,
+        "mean_s": 276.7169373549884,
+        "median_s": 2.0,
+        "min_s": 1.0,
+        "max_s": 6772.0,
+        "p95_s": 1617.0
+      }
+    },
+    "it": {
+      "runs": 367,
+      "conclusions": {
+        "action_required": 18,
+        "failure": 29,
+        "success": 250,
+        "cancelled": 70
+      },
+      "pr_runs": 268,
+      "cancelled_pr_runs": 12,
+      "pr_cancelled_fraction": 0.04477611940298507,
+      "attempt_start_to_first_job_start": {
+        "n": 313,
+        "mean_s": 1461.003194888179,
+        "median_s": 20.0,
+        "min_s": 2.0,
+        "max_s": 20656.0,
+        "p95_s": 6345.0
+      },
+      "job_created_to_started": {
+        "n": 2139,
+        "mean_s": 1481.561009817672,
+        "median_s": 20.0,
+        "min_s": 1.0,
+        "max_s": 20655.0,
+        "p95_s": 5789.0
+      },
+      "pr_job_created_to_started": {
+        "n": 1778,
+        "mean_s": 1707.4190101237346,
+        "median_s": 69.5,
+        "min_s": 1.0,
+        "max_s": 20655.0,
+        "p95_s": 6232.0
+      },
+      "push_job_created_to_started": {
+        "n": 361,
+        "mean_s": 369.1634349030471,
+        "median_s": 2.0,
+        "min_s": 1.0,
+        "max_s": 6546.0,
+        "p95_s": 3335.0
+      }
+    }
+  },
+  "new_commit_cancellation_candidate_count": 15,
+  "all_available_actual_runner_jobs": {
+    "peak_distinct_prs": 9,
+    "peak_intervals": 122,
+    "exactly_2": {
+      "seconds": 33184.0,
+      "episodes": 392,
+      "longest_episode_s": 846.0
+    },
+    "exactly_3": {
+      "seconds": 9717.0,
+      "episodes": 190,
+      "longest_episode_s": 919.0
+    },
+    "at_least_2": {
+      "seconds": 53988.0,
+      "episodes": 264,
+      "longest_episode_s": 3246.0
+    },
+    "at_least_3": {
+      "seconds": 20804.0,
+      "episodes": 129,
+      "longest_episode_s": 1820.0
+    },
+    "at_least_4": {
+      "seconds": 11087.0,
+      "episodes": 63,
+      "longest_episode_s": 1531.0
+    },
+    "time_weighted_distinct_prs_when_active": 1.6646765456534194,
+    "active_seconds": 153592.0,
+    "seconds_by_distinct_pr_count": {
+      "0": 451208.0,
+      "1": 99604.0,
+      "2": 33184.0,
+      "3": 9717.0,
+      "4": 4037.0,
+      "5": 1500.0,
+      "6": 2312.0,
+      "7": 2872.0,
+      "8": 360.0,
+      "9": 6.0
+    },
+    "zero_observed_pr_seconds_full_window": 451208.0,
+    "full_window_buckets": {
+      "0": 451208.0,
+      "1": 99604.0,
+      "2": 33184.0,
+      "3": 9717.0,
+      "4+": 11087.0
+    },
+    "full_window_bucket_percent": {
+      "0": 74.60449735449735,
+      "1": 16.468915343915345,
+      "2": 5.4867724867724865,
+      "3": 1.6066468253968254,
+      "4+": 1.8331679894179893
+    },
+    "time_weighted_median_distinct_prs_when_active": 1,
+    "time_weighted_p95_distinct_prs_when_active": 4,
+    "peak_examples": [
+      {
+        "kind": "all_available_actual_runner_jobs",
+        "start_utc": "2026-10-17T14:23:56+00:00",
+        "end_utc": "2026-10-17T14:24:00+00:00",
+        "seconds": 4.0,
+        "distinct_prs": 9,
+        "active_intervals": 49,
+        "prs": "6457;7088;7387;7661;7666;7668;7691;7699;7776",
+        "run_ids": "38210036830;38752107044;38758225737;38765300281;38859329393;38891986408;38998043669;39005108874;39040522524;39040522579;39040522590"
+      },
+      {
+        "kind": "all_available_actual_runner_jobs",
+        "start_utc": "2026-10-17T14:24:15+00:00",
+        "end_utc": "2026-10-17T14:24:17+00:00",
+        "seconds": 2.0,
+        "distinct_prs": 9,
+        "active_intervals": 41,
+        "prs": "6457;7088;7387;7618;7639;7661;7691;7699;7776",
+        "run_ids": "38210036830;38430032924;38694499916;38752107044;38859329393;38891986408;38998043669;39005108874;39040522524;39040522579;39040522590"
+      }
+    ]
+  },
+  "all_available_executions": 7559,
+  "all_available_unknown_identity_pr_executions": 0,
+  "unavailable_prior_attempts": 29,
+  "latest_actual_pr_job_queue": {
+    "n": 5829,
+    "mean_s": 1562.0571281523416,
+    "median_s": 55.0,
+    "min_s": 1.0,
+    "max_s": 20655.0,
+    "p95_s": 6129.0
+  },
+  "latest_actual_all_job_queue": {
+    "n": 7205,
+    "mean_s": 1319.8569049271339,
+    "median_s": 7.0,
+    "min_s": 1.0,
+    "max_s": 20655.0,
+    "p95_s": 5617.0
+  },
+  "distinct_identified_prs": 164
+}

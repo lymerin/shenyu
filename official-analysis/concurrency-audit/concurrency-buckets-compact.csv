@@ -1,0 +1,16 @@
+﻿basis,distinct_prs,seconds,percent_of_604800_seconds
+workflow_envelope,0,300164.0,49.63029100529101
+workflow_envelope,1,68807.0,11.376818783068783
+workflow_envelope,2,38923.0,6.435681216931217
+workflow_envelope,3,27024.0,4.468253968253968
+workflow_envelope,4+,169882.0,28.088955026455025
+actual_runner_jobs,0,457576.0,75.6574074074074
+actual_runner_jobs,1,96323.0,15.926421957671957
+actual_runner_jobs,2,32666.0,5.401124338624339
+actual_runner_jobs,3,8118.0,1.3422619047619047
+actual_runner_jobs,4+,10117.0,1.6727843915343916
+all_available_actual_runner_jobs,0,451208.0,74.60449735449735
+all_available_actual_runner_jobs,1,99604.0,16.468915343915345
+all_available_actual_runner_jobs,2,33184.0,5.4867724867724865
+all_available_actual_runner_jobs,3,9717.0,1.6066468253968254
+all_available_actual_runner_jobs,4+,11087.0,1.8331679894179893

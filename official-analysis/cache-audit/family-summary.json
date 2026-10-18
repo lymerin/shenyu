@@ -1,0 +1,16 @@
+[
+  {
+    "family": "manual",
+    "count": 8,
+    "bytes": 6213710622.0,
+    "refs": 8,
+    "keys": 3
+  },
+  {
+    "family": "setup-java",
+    "count": 3,
+    "bytes": 4291562579.0,
+    "refs": 3,
+    "keys": 3
+  }
+]

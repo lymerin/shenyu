@@ -1,0 +1,33 @@
+{
+  "window_end": "2026-10-18T02:45:44Z",
+  "method": "explicit GET; created_at windows; recursively split queries over 1000; per_page=100 pagination; latest run conclusion at snapshot; earlier-created carry-ins excluded",
+  "windows": {
+    "7": {
+      "runs": 1500,
+      "by_workflow": {
+        ".github/workflows/e2e-k8s.yml": 376,
+        ".github/workflows/integrated-test.yml": 367,
+        ".github/workflows/native-sql-matrix.yml": 381,
+        ".github/workflows/ci.yml": 376
+      }
+    },
+    "14": {
+      "runs": 2352,
+      "by_workflow": {
+        ".github/workflows/e2e-k8s.yml": 620,
+        ".github/workflows/integrated-test.yml": 609,
+        ".github/workflows/native-sql-matrix.yml": 503,
+        ".github/workflows/ci.yml": 620
+      }
+    },
+    "30": {
+      "runs": 6555,
+      "by_workflow": {
+        ".github/workflows/e2e-k8s.yml": 2022,
+        ".github/workflows/integrated-test.yml": 2008,
+        ".github/workflows/native-sql-matrix.yml": 503,
+        ".github/workflows/ci.yml": 2022
+      }
+    }
+  }
+}

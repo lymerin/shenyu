@@ -1,0 +1,28 @@
+{
+  "anchor": "2026-10-18T02:45:44+00:00",
+  "window_start": "2026-10-11T02:45:44+00:00",
+  "population_runs_created_in_7d": 1500,
+  "population_latest_failure_runs": 138,
+  "population_nonfailure_runs_with_rerun": 55,
+  "runs_with_all_attempt_jobs_fetched": 193,
+  "all_attempt_jobs_fetched": 2668,
+  "failed_jobs_in_fetched_runs": 327,
+  "excluded_aggregate_status_jobs": 119,
+  "excluded_artifact_only_or_no_failed_step_jobs": 10,
+  "failed_jobs_log_scanned": 198,
+  "scan_categories": {
+    "other-failure": 33,
+    "test-or-build-failure": 148,
+    "central-transient": 17
+  },
+  "confirmed_central_transient_jobs": 17,
+  "confirmed_central_transient_runs": 17,
+  "pure_central_classifier_accepted_jobs": 11,
+  "central_failure_types": {
+    "reset": 5,
+    "502": 12
+  },
+  "central_jobs_with_later_same_run_success": 7,
+  "post_anchor_failed_jobs_not_included_in_window": [],
+  "scope_limitation": "All failure-conclusion runs created in the 7-day window plus nonfailure runs with attempt>1; cancelled attempt=1 runs and runs created before the window are not exhaustively log-scanned. 14/30-day logs are not exhaustively scanned."
+}

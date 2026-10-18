@@ -1,0 +1,4 @@
+﻿workflow,all_runs,all_cancelled,pr_runs,pr_cancelled,pr_cancelled_percent
+ci,376,80,277,14,5.054151624548736
+e2e,376,78,277,19,6.859205776173286
+it,367,70,268,12,4.477611940298507

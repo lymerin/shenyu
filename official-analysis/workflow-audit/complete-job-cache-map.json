@@ -1,0 +1,428 @@
+[
+  {
+    "workflow_file": "assign.yml",
+    "workflow_name": "Assign",
+    "job": "assign",
+    "events": "issue_comment",
+    "job_if": "github.event.issue.pull_request && contains(github.event.comment.body, '/assign')",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "auto-notify.yml",
+    "workflow_name": "Auto Notify",
+    "job": "notify-committers",
+    "events": "workflow_dispatch",
+    "job_if": "${{ false }}",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "agent_gateway_migrations",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "changes",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "registry_dependencies",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && needs.changes.outputs.code == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": "./mvnw -B -ntp -pl shenyu-admin,shenyu-spring-boot-starter/shenyu-spring-boot-starter-client/shenyu-spring-boot-starter-client-beat -am package dependency:tree \\ | ./mvnw -B -ntp -pl \"$REGISTRY_MODULES\" -am package dependency:tree \\"
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "rat_check",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && needs.changes.outputs.rat_required == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": "run: ./mvnw -B -ntp apache-rat:check"
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "pr_build",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && github.event_name == 'pull_request' && needs.changes.outputs.code == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "- name: Verify mvnd installation | mvnd ${MAVEN_ARGS} ${MODULE_ARGS} test ${TEST_ARGS} | ./mvnw ${MAVEN_ARGS} ${MODULE_ARGS} test ${TEST_ARGS}"
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "build_local_repo",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && github.event_name == 'push' && needs.changes.outputs.code == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "mvnd ${MAVEN_ARGS} install ${BUILD_ARGS} | ./mvnw ${MAVEN_ARGS} install ${BUILD_ARGS}"
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "test_group",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && github.event_name == 'push' && needs.changes.outputs.code == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "./mvnw -B -ntp -T 1C -pl \"${modules}\" test -Prelease -DskipRemoteResources=true"
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "compat_java21",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && github.event_name == 'push' && needs.changes.outputs.code == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "./mvnw -B -ntp -T 1C test -Prelease -DskipRemoteResources=true -Djacoco.skip=true"
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "check-license-header",
+    "events": "pull_request,push",
+    "job_if": "(github.repository == 'apache/shenyu')",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "ci.yml",
+    "workflow_name": "ci",
+    "job": "requirement",
+    "events": "pull_request,push",
+    "job_if": "(github.repository == 'apache/shenyu') && always()",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "close.yml",
+    "workflow_name": "Close",
+    "job": "close",
+    "events": "issue_comment",
+    "job_if": "github.event.issue.pull_request && contains(github.event.comment.body, '/close')",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "codeql-analysis.yml",
+    "workflow_name": "CodeQL",
+    "job": "analyze",
+    "events": "push,pull_request",
+    "job_if": "(github.repository == 'apache/shenyu')",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        if: github.event_name != 'pull_request'\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "./mvnw -B -ntp -T 1C package \\"
+  },
+  {
+    "workflow_file": "docker-publish-dockerhub.yml",
+    "workflow_name": "docker-publish-dockerhub",
+    "job": "dockerhub",
+    "events": "release",
+    "job_if": "(github.repository == 'apache/shenyu')",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "mvnd -B clean -Prelease -Dmaven.javadoc.skip=true -B -Drat.skip=true -Djacoco.skip=true -DskipITs -DskipTests package | ./mvnw.cmd -B clean -Prelease -Dmaven.javadoc.skip=true -B -Drat.skip=true -Djacoco.skip=true -DskipITs -DskipTests package | ./mvnw -B clean -Prelease -Dmaven.javadoc.skip=true -B -Drat.skip=true -Djacoco.skip=true -DskipITs -DskipTests package"
+  },
+  {
+    "workflow_file": "docker-publish.yml",
+    "workflow_name": "docker-publish-ghcr",
+    "job": "build",
+    "events": "push",
+    "job_if": "(github.repository == 'apache/shenyu')",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        id: restore-maven-cache\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "mvnd -B clean -Prelease -Dmaven.javadoc.skip=true -B -Drat.skip=true -Djacoco.skip=true -DskipITs -DskipTests package | ./mvnw.cmd -B clean -Prelease -Dmaven.javadoc.skip=true -B -Drat.skip=true -Djacoco.skip=true -DskipITs -DskipTests package | ./mvnw -B clean -Prelease -Dmaven.javadoc.skip=true -B -Drat.skip=true -Djacoco.skip=true -DskipITs -DskipTests package"
+  },
+  {
+    "workflow_file": "e2e-k8s.yml",
+    "workflow_name": "e2e",
+    "job": "changes",
+    "events": "pull_request,push",
+    "job_if": "",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "e2e-k8s.yml",
+    "workflow_name": "e2e",
+    "job": "build-docker-images",
+    "events": "pull_request,push",
+    "job_if": "${{ needs.changes.outputs.run_e2e == 'true' }}",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Save ShenYu Maven Repos\n        uses: actions/cache/save@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}"
+    ],
+    "maven_workload": "mvnd -B clean install -Prelease,docker -Dmaven.javadoc.skip=true -Drat.skip=true -Dmaven.test.skip=true -Djacoco.skip=true -DskipITs -DskipTests -T1C | ./mvnw.cmd -B clean install -Prelease,docker -Dmaven.javadoc.skip=true -Drat.skip=true -Dmaven.test.skip=true -Djacoco.skip=true -DskipITs -DskipTests -T1C | ./mvnw -B clean install -Prelease,docker -Dmaven.javadoc.skip=true -Drat.skip=true -Dmaven.test.skip=true -Djacoco.skip=true -DskipITs -DskipTests -T1C"
+  },
+  {
+    "workflow_file": "e2e-k8s.yml",
+    "workflow_name": "e2e",
+    "job": "e2e-storage",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && needs.changes.outputs.run_storage == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "e2e-k8s.yml",
+    "workflow_name": "e2e",
+    "job": "e2e-case",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && needs.changes.outputs.run_e2e_cases == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Restore ShenYu Maven Repos\n        uses: actions/cache/restore@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "mvnd -B clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -pl \"${EXAMPLE_PROJECTS}\" -am -f ./shenyu-examples/pom.xml | ./mvnw.cmd -B clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -pl \"${EXAMPLE_PROJECTS}\" -am -f ./shenyu-examples/pom.xml | ./mvnw -B clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -pl \"${EXAMPLE_PROJECTS}\" -am -f ./shenyu-examples/pom.xml"
+  },
+  {
+    "workflow_file": "e2e-k8s.yml",
+    "workflow_name": "e2e",
+    "job": "requirement",
+    "events": "pull_request,push",
+    "job_if": "${{ always() }}",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "integrated-test-k8s-gateway-api.yml",
+    "workflow_name": "it-k8s-gateway-api",
+    "job": "build",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu'",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [
+      "name: Cache Maven Repos\n        if: steps.filter.outputs.k8s-gateway-api == 'true'\n        uses: actions/cache@v3\n        with:\n          path: ~/.m2/repository\n          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n          restore-keys: |\n            ${{ runner.os }}-maven-"
+    ],
+    "maven_workload": "mvnd -B clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | ./mvnw -B clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | echo \"Using mvnd for build integrated tests\" | mvnd -B clean install -Pit -DskipTests -am -f ./shenyu-integrated-test/pom.xml | ./mvnw -B clean install -Pit -DskipTests -am -f ./shenyu-integrated-test/pom.xml | mvnd -B clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -am -f ./shenyu-examples/pom.xml | ./mvnw -B clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -am -f ./shenyu-examples/pom.xml | echo \"Using mvnd for running tests\" | mvnd test -Pit -f ./shenyu-integrated-test/${{ matrix.case }}/pom.xml | ./mvnw test -Pit -f ./shenyu-integrated-test/${{ matrix.case }}/pom.xml"
+  },
+  {
+    "workflow_file": "integrated-test-k8s-ingress.yml",
+    "workflow_name": "it-k8s",
+    "job": "changes",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "integrated-test-k8s-ingress.yml",
+    "workflow_name": "it-k8s",
+    "job": "build",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && needs.changes.outputs.k8s_ingress == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "uses: ./actions/setup-java-with-retry\n        with:\n          java-version: 17\n          distribution: \"temurin\"\n          cache: \"maven\"\n          cache-dependency-path: |\n            **/pom.xml"
+    ],
+    "maven_workload": "mvnd -B -T 1C clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | ./mvnw -B -T 1C clean install -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | echo \"Using mvnd for build integrated tests\" | mvnd -B -T 1C clean install -Pit -DskipTests -am -f ./shenyu-integrated-test/pom.xml | ./mvnw -B -T 1C clean install -Pit -DskipTests -am -f ./shenyu-integrated-test/pom.xml | mvnd -B -T 1C clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -am -f ./shenyu-examples/pom.xml | ./mvnw -B -T 1C clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -am -f ./shenyu-examples/pom.xml | echo \"Using mvnd for running tests\" | mvnd -T 1C test -Pit -f ./shenyu-integrated-test/${{ matrix.case }}/pom.xml | ./mvnw -T 1C test -Pit -f ./shenyu-integrated-test/${{ matrix.case }}/pom.xml"
+  },
+  {
+    "workflow_file": "integrated-test.yml",
+    "workflow_name": "it",
+    "job": "changes",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "integrated-test.yml",
+    "workflow_name": "it",
+    "job": "build",
+    "events": "pull_request,push",
+    "job_if": "github.repository == 'apache/shenyu' && needs.changes.outputs.run_integration == 'true'",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "uses: ./actions/setup-java-with-retry\n        with:\n          java-version: 17\n          distribution: \"temurin\"\n          cache: \"maven\"\n          cache-dependency-path: |\n            **/pom.xml"
+    ],
+    "maven_workload": "mvnd -B -T 1C clean install -Prelease,docker -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | ./mvnw -B -T 1C clean install -Prelease,docker -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | mvnd -B -T 1C clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -am -f ./shenyu-examples/pom.xml | ./mvnw -B -T 1C clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -am -f ./shenyu-examples/pom.xml | ./mvnw -B -ntp -T 1C clean install -Pit -Dmaven.test.skip=true \\ | ./mvnw -B -ntp -T 1C test -Pit -DfailIfNoTests=true \\"
+  },
+  {
+    "workflow_file": "issue-label.yml",
+    "workflow_name": "Issue Manager",
+    "job": "execute",
+    "events": "issue_comment",
+    "job_if": "",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "k8s-examples-http.yml",
+    "workflow_name": "k8s-examples-http",
+    "job": "k8s-examples-http",
+    "events": "pull_request,push",
+    "job_if": "(github.repository == 'apache/shenyu')",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "name: Setup Java and Maven cache\n        if: steps.cases.outputs.run_k8s_examples == 'true'\n        uses: ./actions/setup-java-with-retry\n        with:\n          java-version: 17\n          distribution: \"temurin\"\n          cache: \"maven\"\n          cache-dependency-path: |\n            **/pom.xml"
+    ],
+    "maven_workload": "mvnd -B -T 1C clean install -Prelease,docker -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | ./mvnw -B -T 1C clean install -Prelease,docker -Dmaven.javadoc.skip=true -Dmaven.test.skip=true | mvnd -B -T 1C clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -f ./shenyu-examples/pom.xml | ./mvnw -B -T 1C clean install -Pexample -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -f ./shenyu-examples/pom.xml"
+  },
+  {
+    "workflow_file": "lgtm.yml",
+    "workflow_name": "LGTM",
+    "job": "lgtm",
+    "events": "issue_comment",
+    "job_if": "github.event.issue.pull_request && contains(github.event.comment.body, '/lgtm')",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "native-sql-matrix.yml",
+    "workflow_name": "native-sql-matrix",
+    "job": "scope",
+    "events": "pull_request,push,workflow_dispatch",
+    "job_if": "",
+    "concurrency_group": "native-sql-matrix-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "native-sql-matrix.yml",
+    "workflow_name": "native-sql-matrix",
+    "job": "runner-tests",
+    "events": "pull_request,push,workflow_dispatch",
+    "job_if": "",
+    "concurrency_group": "native-sql-matrix-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "native-sql-matrix.yml",
+    "workflow_name": "native-sql-matrix",
+    "job": "list-contract",
+    "events": "pull_request,push,workflow_dispatch",
+    "job_if": "needs.scope.outputs.required == 'true'",
+    "concurrency_group": "native-sql-matrix-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [
+      "uses: actions/setup-java@v4\n        with:\n          distribution: temurin\n          java-version: '17'\n          cache: maven"
+    ],
+    "maven_workload": "./mvnw -B -ntp -pl shenyu-admin -am test"
+  },
+  {
+    "workflow_file": "native-sql-matrix.yml",
+    "workflow_name": "native-sql-matrix",
+    "job": "native-sql",
+    "events": "pull_request,push,workflow_dispatch",
+    "job_if": "needs.scope.outputs.required == 'true'",
+    "concurrency_group": "native-sql-matrix-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "native-sql-matrix.yml",
+    "workflow_name": "native-sql-matrix",
+    "job": "sql-matrix",
+    "events": "pull_request,push,workflow_dispatch",
+    "job_if": "always()",
+    "concurrency_group": "native-sql-matrix-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "retest.yml",
+    "workflow_name": "Retest",
+    "job": "retest",
+    "events": "issue_comment",
+    "job_if": "github.event.issue.pull_request && contains(github.event.comment.body, '/retest')",
+    "concurrency_group": "",
+    "cancel_in_progress": "",
+    "cache_steps": [],
+    "maven_workload": ""
+  },
+  {
+    "workflow_file": "wasm-fixtures.yml",
+    "workflow_name": "wasm-fixtures",
+    "job": "rebuild-and-test",
+    "events": "pull_request,push",
+    "job_if": "",
+    "concurrency_group": "${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}",
+    "cancel_in_progress": "true",
+    "cache_steps": [],
+    "maven_workload": "Indirect: verify-wasm-fixtures.py invokes ./mvnw -pl shenyu-plugin/shenyu-plugin-wasm-base -am test"
+  }
+]

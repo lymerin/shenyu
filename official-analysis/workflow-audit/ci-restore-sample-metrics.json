@@ -1,0 +1,58 @@
+[
+  {
+    "run_id": 38154959049,
+    "job_id": 114515963233,
+    "ref": "refs/pull/7549/merge",
+    "key": "Linux-maven-981f2c96a3bb3e8879f4af69ce60d6ed6bcb16fb38b3fda445161b5d952755fd",
+    "matched_key": "Linux-maven-951873257a42dd88bd18c2d4b383cc53d8f9568a1e74f54ec7c1b4c476010705",
+    "result": "fallback",
+    "restore_bytes": 770259741,
+    "restore_step_seconds": 6.0,
+    "restore_started_at": "2026-10-11T16:19:31Z",
+    "restore_completed_at": "2026-10-11T16:19:37Z",
+    "url": "https://github.com/apache/shenyu/actions/runs/38154959049/job/114515963233",
+    "central_download_metric": "not measurable from suppressed transfer logs (-ntp)"
+  },
+  {
+    "run_id": 38752106763,
+    "job_id": 116508275837,
+    "ref": "refs/pull/6457/merge",
+    "key": "Linux-maven-fc8e3aaa12132fdc5ed9518d95cdcdf9ab68dd1668e78be6fb36363f4fb74ff6",
+    "matched_key": "Linux-maven-fc8e3aaa12132fdc5ed9518d95cdcdf9ab68dd1668e78be6fb36363f4fb74ff6",
+    "result": "exact",
+    "restore_bytes": 776512922,
+    "restore_step_seconds": 7.0,
+    "restore_started_at": "2026-10-15T16:59:27Z",
+    "restore_completed_at": "2026-10-15T16:59:34Z",
+    "url": "https://github.com/apache/shenyu/actions/runs/38752106763/job/116508275837",
+    "central_download_metric": "not measurable from suppressed transfer logs (-ntp)"
+  },
+  {
+    "run_id": 39086285148,
+    "job_id": 117553474924,
+    "ref": "refs/pull/7793/merge",
+    "key": "Linux-maven-8a2c41e76411b4f1bee48bb1e3f397f58722a77069a5329af28a1de9a3b8710a",
+    "matched_key": "Linux-maven-8a2c41e76411b4f1bee48bb1e3f397f58722a77069a5329af28a1de9a3b8710a",
+    "result": "exact",
+    "restore_bytes": 776804688,
+    "restore_step_seconds": 7.0,
+    "restore_started_at": "2026-10-18T01:23:21Z",
+    "restore_completed_at": "2026-10-18T01:23:28Z",
+    "url": "https://github.com/apache/shenyu/actions/runs/39086285148/job/117553474924",
+    "central_download_metric": "not measurable from suppressed transfer logs (-ntp)"
+  },
+  {
+    "run_id": 39085490404,
+    "job_id": 117551071469,
+    "ref": "refs/pull/7673/merge",
+    "key": "Linux-maven-2f4add9ec903f674bac196e89963b5f5bb461a9e88f485a3a0264223e7746ce4",
+    "matched_key": "Linux-maven-8a2c41e76411b4f1bee48bb1e3f397f58722a77069a5329af28a1de9a3b8710a",
+    "result": "fallback",
+    "restore_bytes": 776804688,
+    "restore_step_seconds": 7.0,
+    "restore_started_at": "2026-10-18T01:10:35Z",
+    "restore_completed_at": "2026-10-18T01:10:42Z",
+    "url": "https://github.com/apache/shenyu/actions/runs/39085490404/job/117551071469",
+    "central_download_metric": "not measurable from suppressed transfer logs (-ntp)"
+  }
+]
