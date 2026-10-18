@@ -1,0 +1,1202 @@
+{
+  "source_commit": "d309420aefeeb2ad34791436c7b4475531b4edf7",
+  "current_pr_commit": "5a2f0470fb9e6a7f48c2156dda7a7d97ce1d93cb",
+  "helper_blob_sha": "529cf6e13de45a06af93d5ce16ae4fb4eb8e9462",
+  "helper_unchanged_after_rebase": true,
+  "scanned_logs": 198,
+  "central_transfer_logs": 17,
+  "accepted_central_transfer_logs": 15,
+  "other_failure_logs": 181,
+  "accepted_other_failure_logs": 0,
+  "note": "Offline replay against preserved official logs; acceptance is classification, not an observed retry recovery.",
+  "results": [
+    {
+      "job": 114373581417,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114376573709,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114394951893,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114396310939,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114427210234,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114430572989,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114430573047,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114452620423,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114452620458,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114498050072,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114498206476,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114504689506,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114504689615,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114504753362,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114624834495,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114624834540,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114630976334,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114630976437,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114636116420,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114637696681,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114648867384,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114648867400,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114655518046,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114658609638,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114660966909,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114673410242,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114673410356,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114681039342,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114681047512,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114681192577,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114681504542,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114681519021,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114681694979,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114682102614,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114682311142,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114682756986,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114682757014,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114682992220,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114683804144,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114685756354,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114687642679,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114692461556,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114693512884,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114721594155,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114748790579,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114748790689,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114750931032,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114811776022,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114811776485,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114818770531,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114818770849,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114880081690,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114880082496,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114900577722,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114921965548,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114921965636,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114932395836,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114932396032,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114938491215,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114938491321,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 114950290922,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115116564399,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115118586371,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115121984702,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115127017140,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115135864009,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115141989246,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115142195040,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115170023589,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115416696261,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 115419076959,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115419077089,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 115502435876,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115556165039,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115665178244,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115680083258,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115699277105,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115816897619,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115844959994,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115872100007,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115886292939,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115962098716,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115962852863,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115968049203,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115976011366,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115977400595,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115977400644,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115987944202,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115990129091,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115991562001,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 115993002351,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116017005720,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116017005873,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116022248989,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116222956493,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116284639208,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116288521275,
+      "category": "central-transient",
+      "old_accept": false,
+      "new_accept": true
+    },
+    {
+      "job": 116288980192,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116290967652,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116302690862,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116475415968,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116475471229,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116481666302,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116491873854,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116492293535,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116494460956,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116500650972,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116507895457,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116574960579,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116574960609,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116579639556,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116579639942,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116592378106,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116592378215,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116597330212,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116766826281,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116769167809,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116769168160,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116769383235,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116769383256,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116780939589,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116828656893,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116836501899,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116838246301,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116839126177,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116839315904,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116839970383,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116839970407,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116840349999,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116840422307,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116840422592,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116841144336,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116841144566,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116841220630,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116841220766,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116854920448,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116855199933,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116855199978,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116855475327,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116855475404,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116855788006,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116855788232,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116856417878,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116856831023,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116856831090,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116905413883,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116937290537,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116937729539,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116938715250,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116938768446,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116938976734,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116939048257,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116939128402,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116940727569,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116943487469,
+      "category": "central-transient",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116943544972,
+      "category": "central-transient",
+      "old_accept": false,
+      "new_accept": true
+    },
+    {
+      "job": 116943548215,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116943558563,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116943614315,
+      "category": "central-transient",
+      "old_accept": false,
+      "new_accept": true
+    },
+    {
+      "job": 116945788549,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116945812524,
+      "category": "central-transient",
+      "old_accept": true,
+      "new_accept": true
+    },
+    {
+      "job": 116946001348,
+      "category": "central-transient",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116946837021,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116946965102,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 116947697084,
+      "category": "central-transient",
+      "old_accept": false,
+      "new_accept": true
+    },
+    {
+      "job": 116989492155,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117001248388,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117001248570,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117001248717,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117054893091,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117056502715,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117056502972,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117293661695,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117294870877,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117303650701,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117303650778,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117305455912,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117305769853,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117305770018,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117308713915,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117309779925,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117316449626,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117368524758,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117368797194,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117368797272,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117390508005,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117393141642,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117393583661,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117400155258,
+      "category": "other-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117400749449,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117410085085,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117418790773,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117418837959,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117432903569,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117450590451,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117454739082,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117543925925,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    },
+    {
+      "job": 117553472273,
+      "category": "test-or-build-failure",
+      "old_accept": false,
+      "new_accept": false
+    }
+  ]
+}
